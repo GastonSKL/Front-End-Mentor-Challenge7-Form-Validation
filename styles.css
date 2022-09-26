@@ -1,0 +1,244 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 20px;
+    background-color: rgb(231, 223, 223);
+}
+
+:root{
+    --Blue: hsl(223, 87%, 63%);
+    --PaleBlue: hsl(223, 100%, 88%);
+    --LightRed: hsl(354, 100%, 66%);
+    --Gray: hsl(0, 0%, 59%);
+    --VeryDarkBlue: hsl(209, 33%, 12%);
+}
+
+/*----------------------------------*/
+main{
+    margin: 4.25em auto;
+    }
+.main__logo img{
+    display: block;
+    margin: auto;
+    width: 2.75em;
+    margin-bottom: 2.25em;
+    animation: updown 800ms;
+}
+
+h1{
+    text-align: center;
+    font-size: 1.2em;
+    color: var(--Gray);
+    margin-bottom: 1em;
+    font-weight: 700;
+    animation: leftrigth 1000ms;
+}
+
+h1 .h1-upgrade{
+    color: black;
+}
+
+h2{
+    text-align: center;
+    font-size: .8em;
+    font-weight: 600;
+    margin-bottom: 1.75em;
+    animation: rigthleft 1000ms;
+}
+
+
+
+.main__form{
+    width: 14em;
+    margin: auto;
+}
+
+input[type="email"] {
+    width: 100%;
+    height: 2.95em;
+    padding-left: 25px;
+    border-radius: 1.5em;
+    border: 1px solid var(--Blue);
+    font-size:.7em;
+}
+
+input[type="email"]:focus{
+    outline: none;
+    border: 1px solid var(--Blue);
+    
+}
+
+#error{
+    font-size: .56em;
+    color: var(--LightRed);
+    padding-top: .3em;
+    padding-left: 2.4em;
+    display: none;
+}
+
+input[type="submit"]{
+    width: 100%;
+    height: 2.95em;
+    border-radius: 1.5em;
+    border: none;
+    background-color: var(--Blue);
+    font-size: .7em;
+    letter-spacing: .1em;
+    font-weight: 600;
+    color: white;
+    margin-top: 1em;
+    margin-bottom: 3.625em;
+}
+input[type="submit"]:active{
+    background-color: var(--PaleBlue);
+}
+
+.main__img img{
+    width: 16em;
+    display: block;
+    margin: auto;
+}
+
+.main__social{
+    width: 5.125em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 6.375em auto 3em;
+    animation: downup 1000ms;
+}
+
+.main__social .main__social-item{
+    width: 1.4em;
+    height: 1.4em;
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    
+}
+
+.main__social .main__social-item a{
+    text-decoration: none;
+    color: var(--Blue);
+    width: 0.75em;
+    height: 0.75em;
+    font-size: .9em;
+
+}
+
+.main__social .main__social-item:hover{
+    background-color: var(--Blue);
+    
+}
+
+.main__social .main__social-item a:hover{
+    color: white;
+}
+
+.main__copyright p{
+    text-align: center;
+    font-size: .5em;
+    margin-bottom: 3em;
+}
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width:1000px){
+    .main__logo img{
+        width: 4.5em;
+        height: 1.5em;
+    }
+
+    h1{
+        font-size: 1.8em;
+    }
+
+    h2{
+        font-size: 1em;
+    }
+
+    .main__form{
+        width: 23em;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 1em;
+        margin-bottom: 4.5em;
+    }
+    .main__form .main__form-item1{
+        height: 2.75em;
+        width: 15em;
+        flex: 2;
+    }
+    input[type="email"] {
+        width: 100%;
+        height: 100%;
+    }
+    .main__form .main__form-item2{
+        height: 2.75em;
+        width: 10em;
+        flex: 1;
+    }
+
+    input[type="submit"]{
+        width: 100%;
+        height: 100%;
+        margin-top: 0em;
+    }
+    .main__img img{
+        width: 32.5em;
+    }
+    
+}
+
+@keyframes updown {
+    0%{
+        transform: translateY(-1000px);
+        
+    }
+    100%{
+        transform: translateY(0);
+        
+    }
+}
+
+@keyframes downup {
+    0%{
+        transform: translateY(200px);
+        
+    }
+    100%{
+        transform: translateY(0);
+        
+    }}
+@keyframes leftrigth {
+        0%{
+            transform: translatex(-200px);
+            
+        }
+        100%{
+            transform: translateY(0);
+            
+        }}
+
+@keyframes rigthleft {
+     0%{
+        transform: translatex(200px);
+                
+     }
+    100%{
+        transform: translateY(0);
+          
+        }}        
